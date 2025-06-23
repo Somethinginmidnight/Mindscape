@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MindScape | Home</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Open+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Navigation -->
+  <header class="header">
+    <div class="container">
+      <h1 class="logo">MindScape</h1>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="quotes.html">Quotes</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h2>Explore the Depths of Your Mind</h2>
+      <p>Unveil the secrets of the psyche with MindScape.</p>
+    </div>
+  </section>
+
+  <!-- Section 1: What is Psychology -->
+  <section class="section intro">
+    <div class="container">
+      <h2>What is Psychology?</h2>
+      <p>Psychology is the scientific study of behavior and mental processes...</p>
+    </div>
+  </section>
+
+  <!-- Section 2: Historical Background -->
+  <section class="section history bg-image" style="background-image: url('images/history.jpg');">
+    <div class="overlay">
+      <h2>Origins of Psychology</h2>
+      <p>From Wilhelm Wundt's laboratory to the depths of Freudian theory...</p>
+    </div>
+  </section>
+
+  <!-- Section 3: Famous Psychologists -->
+  <section class="section psychologists">
+    <div class="container">
+      <h2>Legendary Psychologists</h2>
+      <div class="cards">
+        <div class="card">
+          <img src="images/freud.jpg" alt="Sigmund Freud" />
+          <h3>Sigmund Freud</h3>
+          <p>Founder of psychoanalysis...</p>
+        </div>
+        <div class="card">
+          <img src="images/jung.jpg" alt="Carl Jung" />
+          <h3>Carl Jung</h3>
+          <p>Introduced concepts like archetypes...</p>
+        </div>
+        <div class="card">
+          <img src="images/rogers.jpg" alt="Carl Rogers" />
+          <h3>Carl Rogers</h3>
+          <p>Humanistic psychology pioneer...</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 4: Psychology Branches -->
+  <section class="section branches">
+    <div class="container">
+      <h2>Major Branches of Psychology</h2>
+      <ul>
+        <li>Clinical Psychology</li>
+        <li>Cognitive Psychology</li>
+        <li>Developmental Psychology</li>
+        <li>Social Psychology</li>
+        <li>Neuropsychology</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Section 5: Quotes -->
+  <section class="section quotes bg-image" style="background-image: url('images/quotes-bg.jpg');">
+    <div class="overlay">
+      <blockquote>\"The curious paradox is that when I accept myself just as I am, then I can change.\" — Carl Rogers</blockquote>
+      <blockquote>\"Knowing your own darkness is the best method...\" — Carl Jung</blockquote>
+    </div>
+  </section>
+
+  <!-- Section 6: Gallery -->
+  <section class="section gallery">
+    <div class="container">
+      <h2>Visual Psychology</h2>
+      <div class="gallery-grid">
+        <img src="images/brain1.jpg" alt="Brain Map" />
+        <img src="images/emotion.jpg" alt="Emotions" />
+        <img src="images/therapy.jpg" alt="Therapy Session" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 7: Join Us -->
+  <section class="section join bg-image" style="background-image: url('images/join.jpg');">
+    <div class="overlay">
+      <h2>Join the MindScape Community</h2>
+      <p>Subscribe, explore, connect...</p>
+    </div>
+  </section>
+
+  <!-- Section 8: Contact Us -->
+  <section class="section contact">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <form>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Section 9: Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 MindScape. Made with ❤️ for psychology lovers.</p>
+    </div>
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('fade-in');
+        }
+      });
+    });
+
+    document.querySelectorAll('.section').forEach(section => {
+      observer.observe(section);
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MindScape | About</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Open+Sans&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Navigation -->
+  <header class="header">
+    <div class="container">
+      <h1 class="logo">MindScape</h1>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html" class="active">About</a></li>
+          <li><a href="quotes.html">Quotes</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- About Hero -->
+  <section class="hero" style="background-image: url('images/history.jpg');">
+    <div class="hero-content">
+      <h2>The Journey of Psychology</h2>
+      <p>Discover the minds and milestones that shaped the understanding of human behavior.</p>
+    </div>
+  </section>
+
+  <!-- Timeline Section -->
+  <section class="section timeline">
+    <div class="container">
+      <h2>Psychology Timeline</h2>
+      <ul class="timeline-list">
+        <li>
+          <strong>1879</strong> - Wilhelm Wundt establishes the first experimental psychology lab in Leipzig, Germany.
+        </li>
+        <li>
+          <strong>1900</strong> - Sigmund Freud publishes *The Interpretation of Dreams*, founding psychoanalysis.
+        </li>
+        <li>
+          <strong>1913</strong> - John B. Watson promotes behaviorism.
+        </li>
+        <li>
+          <strong>1950s</strong> - Humanistic psychology rises with Carl Rogers and Abraham Maslow.
+        </li>
+        <li>
+          <strong>1960s</strong> - Cognitive psychology emerges as a dominant paradigm.
+        </li>
+        <li>
+          <strong>Present</strong> - Psychology integrates neuroscience, social sciences, and technology.
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Psychologists Section -->
+  <section class="section psychologists">
+    <div class="container">
+      <h2>Meet the Pioneers</h2>
+      <div class="cards">
+        <div class="card">
+          <img src="images/freud.jpg" alt="Sigmund Freud" />
+          <h3>Sigmund Freud</h3>
+          <p>The father of psychoanalysis, exploring the unconscious mind and the significance of dreams.</p>
+        </div>
+        <div class="card">
+          <img src="images/jung.jpg" alt="Carl Jung" />
+          <h3>Carl Jung</h3>
+          <p>Introduced archetypes and the collective unconscious, expanding analytical psychology.</p>
+        </div>
+        <div class="card">
+          <img src="images/rogers.jpg" alt="Carl Rogers" />
+          <h3>Carl Rogers</h3>
+          <p>Championed humanistic psychology and the client-centered therapeutic approach.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 MindScape. Made with ❤️ for psychology lovers.</p>
+    </div>
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('fade-in');
+        }
+      });
+    });
+
+    document.querySelectorAll('.section').forEach(section => {
+      observer.observe(section);
+    });
+  </script>
+</body>
+</html>

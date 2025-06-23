@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MindScape | Quotes</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Open+Sans&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Navigation -->
+  <header class="header">
+    <div class="container">
+      <h1 class="logo">MindScape</h1>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="quotes.html" class="active">Quotes</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Quotes Hero -->
+  <section class="hero" style="background-image: url('images/quotes-bg.jpg');">
+    <div class="hero-content">
+      <h2>Inspirational Psychology Quotes</h2>
+      <p>Wisdom from the minds who shaped human understanding.</p>
+    </div>
+  </section>
+
+  <!-- Quotes Section -->
+  <section class="section quotes">
+    <div class="container">
+      <blockquote>
+        “The curious paradox is that when I accept myself just as I am, then I can change.”<br>
+        <cite>— Carl Rogers</cite>
+      </blockquote>
+      <blockquote>
+        “Knowing your own darkness is the best method for dealing with the darkness of other people.”<br>
+        <cite>— Carl Jung</cite>
+      </blockquote>
+      <blockquote>
+        “The mind is like an iceberg, it floats with one-seventh of its bulk above water.”<br>
+        <cite>— Sigmund Freud</cite>
+      </blockquote>
+      <blockquote>
+        “What we achieve inwardly will change outer reality.”<br>
+        <cite>— Plutarch</cite>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 MindScape. Made with ❤️ for psychology lovers.</p>
+    </div>
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('fade-in');
+        }
+      });
+    });
+
+    document.querySelectorAll('.section').forEach(section => {
+      observer.observe(section);
+    });
+  </script>
+</body>
+</html>
